@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Bucket List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer type="text/javascript" src="src/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class=e0_3 id="main">
+        <div class="banner" id="banner">bucket list creator</div>
+        <div></div>
+        <div class="leftBlock"></div>
+        <div class="rightBlock"></div>
+    </div>
+
+
+    <div id="div-form">
+        <h4>Add To Your Bucket List</h4>
+        <form id="bucket-list-item">
+            <div>
+                <label for="name">What do you Want to Do?</label>
+                <input type="text" id="activity" name="name" />
+            </div>
+            <div>
+                <label for="image-url">Imput Image URL</label>
+                <input type="text" id="image-url" name="image-url" />
+            </div>
+            <div>
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" />
+            </div>
+            <div>
+                <label for="date-completion">When do you want to complete by?</label>
+                <input type="date" id="completion-date" name="date" />
+                <div>
+                    <input type="submit" value="Add Bucket-List Item" />
+                </div>
+        </form>
+    </div>
+
+    <div id="actual-list">
+        <ol id="list-items">My Bucket List Items
+        </ol>
+    </div>
+
+</body>
+
+</html>

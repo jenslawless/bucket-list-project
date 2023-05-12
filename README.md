@@ -7,4 +7,14 @@ As a user I can…
 Stretch goals --
 - Random bucket list generator
 - Search near me for for different activities 
--
+
+
+Next Week To-Do:
+- Form to post on rightBlock
+- Add buttons to add stock ideas to your List
+- Create List in bottom right with all your Bucket List ideas
+    - **Stretch Goal** Add checkboxes to "check" item off list
+- General formatting of images within the divs
+    - Can we get them to autofill up space?
+- Rotation through images if you select 
+- **Stretch Goal** -- have a filter for list -- can filter by date, location, date added?(id number?)
