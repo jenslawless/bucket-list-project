@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -14,73 +15,33 @@ body {
     text-align: center;
     font-size: 150px;
     min-width: fit-content;
-
 }
 
-<<<<<<< HEAD
 .block_container {
     padding: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
+    grid-column-gap: 70px;
     grid-row-gap: 70px;
 }
 
 .leftBlock {
-    padding-top: 50px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-=======
-.leftBlock {
-    width: 616px;
-    height: 752px;
-    position: absolute;
-    left: 44px;
-    top: 397px;
->>>>>>> jenslaw
 }
-
 
 .rightBlock {
-<<<<<<< HEAD
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
-=======
-    width: 616px;
-    height: 752px;
-    position: absolute;
-    left: 780px;
-    top: 402px;
-}
-
-
-.e15_2 {
-    width: 305px;
-    height: 305px;
-    position: absolute;
-    left: 42px;
-    top: 402px;
-}
-
-.e15_3 {
-    width: 305px;
-    height: 305px;
-    position: absolute;
-    left: 839px;
-    top: 397px;
->>>>>>> jenslaw
+    text-align: center;
+    background-color: #AA4465;
 }
 
 #div-form {
     color: rgba(39, 48, 67);
     font-size: 24px;
     font-family: Bitter;
-
 }
 
 .leftBlock img {
@@ -90,46 +51,29 @@ body {
 }
 
 .rightBlock img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 600px;
+    height: 600px;
 }
 
 #actual-list {
-    display: flex;
-    justify-content: right;
-    color: rgba(39, 48, 67, 1);
+    color: rgba(39, 48, 67);
     font-size: 24px;
     font-family: Bitter;
+    object-fit: cover;
 }
 
 
-
-.button-container {
-    position: relative;
-    width: 50%;
+.imageContainer {
+    display: flex;
+    justify-content: center;
 }
 
-.button-container img {
-    width: 100%;
-    height: auto;
+h2 {
+    text-align: center;
 }
 
-.button-container .btn1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.button-container .btn1:hover {
-    background-color: black;
+.activity,
+.location,
+.dateDue {
+    margin-top: 40px;
 }
