@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+* {
+    text-transform: lowercase;
+    font-family: 'Cormorant Garamond', serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -18,15 +24,14 @@ body {
 }
 
 .block_container {
-    padding: 60px;
+    padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
+    grid-column-gap: 70px;
     grid-row-gap: 70px;
 }
 
 .leftBlock {
-    padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
@@ -35,7 +40,6 @@ body {
 
 
 .rightBlock {
-    padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
@@ -45,8 +49,6 @@ body {
 #div-form {
     color: rgba(39, 48, 67);
     font-size: 24px;
-    font-family: Bitter;
-
 }
 
 .leftBlock img {
@@ -62,11 +64,6 @@ body {
 }
 
 #actual-list {
-    display: flex;
-    justify-content: right;
-    color: rgba(39, 48, 67, 1);
+    color: rgba(39, 48, 67);
     font-size: 24px;
-    font-family: Bitter;
-
-
 }
