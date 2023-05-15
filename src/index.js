@@ -64,4 +64,3 @@ form.addEventListener("submit", (e) => {
         .then(r => r.json())
         .then(data => myBucketList(data))
 })
-
