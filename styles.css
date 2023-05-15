@@ -1,7 +1,10 @@
 body {
     font-size: 16;
     color: rgba(39.00000147521496, 48.000000938773155, 67.00000360608101, 1);
-
+    background-color: rgba(88.00000235438347, 139.0000069141388, 139.0000069141388, 1);
+    width: 1440px;
+    height: 2250px;
+    position: absolute;
 }
 
 
@@ -9,12 +12,6 @@ body {
     overflow: hidden;
 }
 
-.e0_3 {
-    background-color: rgba(88.00000235438347, 139.0000069141388, 139.0000069141388, 1);
-    width: 1440px;
-    height: 2250px;
-    position: absolute;
-}
 
 #banner {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -131,4 +128,5 @@ body {
     text-align: right;
     position: absolute;
     top: 100px;
+    justify-content: right;
 }
