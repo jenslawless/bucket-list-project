@@ -11,14 +11,20 @@ fetch("http://localhost:3000/myList")
     })
 
 function bucketListInspo(listItem) {
-    const initImages = document.createElement("img")
-    const div = document.querySelector(".leftBlock")
+    const imgDiv = document.createElement("div");
+    const button = document.createElement("button");
+    const initImages = document.createElement("img");
     initImages.src = listItem.image
-    div.append(initImages)
 
-    initImages.addEventListener("click", (e) => {
-        console.log("click!")
-    })
+    imgDiv.append(initImages, button);
+    // const divMain = document.querySelector(".leftBlock");
+
+    imgDiv.setAttribute("class", "button-container");
+    button.setAttribute("class", "btn1");
+
+    imgDiv.append(initImages, button);
+    // divMain.append(imgDiv);
+
 }
 
 function myBucketList(listItem) {
@@ -30,6 +36,10 @@ function myBucketList(listItem) {
     div.append(initImages)
     li.textContent = listItem.name
     list.append(li)
+
+    li.addEventListener("click", (e) => {
+        console.log("click")
+    })
 }
 
 function bucketListInspo(listItem) {
