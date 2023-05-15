@@ -1,36 +1,21 @@
 body {
     font-size: 16;
     color: rgba(39.00000147521496, 48.000000938773155, 67.00000360608101, 1);
-    background-color: rgba(88.00000235438347, 139.0000069141388, 139.0000069141388, 1);
-    width: 1440px;
-    height: 2250px;
-    position: absolute;
-}
-
-
-.e0_3 {
-    overflow: hidden;
+    background-color: rgba(88, 139, 139, 1);
+    position: flex;
 }
 
 
 #banner {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: rgba(202.00000315904617, 204.00000303983688, 144.00000661611557, 1);
-    width: 1440px;
-    height: 246px;
-    position: absolute;
-    left: -1px;
-    top: 0px;
+    background-color: rgba(202, 204, 144, 1);
+    position: flex;
     text-align: center;
     font-size: 150px;
 
 }
 
-.e1_2 {
-    border: 1px solid rgba(0, 0, 0, 1);
-}
-
-.e2_3 {
+/* .e2_3 {
     color: rgba(39.00000147521496, 48.000000938773155, 67.00000360608101, 1);
     width: 1125px;
     height: 135px;
@@ -41,7 +26,7 @@ body {
     text-align: center;
     font-size: 100px;
     letter-spacing: 0;
-}
+} */
 
 .leftBlock {
     /* background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1); */
@@ -119,14 +104,11 @@ body {
 }
 
 #actual-list {
-    margin-left: 1rem;
-    border: 10px;
-    color: rgba(39.00000147521496, 48.000000938773155, 67.00000360608101, 1);
+    display: flex;
+    justify-content: right;
+    color: rgba(39, 48, 67, 1);
     font-size: 24px;
     font-family: Bitter;
-    line-height: 1.2;
-    text-align: right;
-    position: absolute;
-    top: 100px;
-    justify-content: right;
+
+
 }
