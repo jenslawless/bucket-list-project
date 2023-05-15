@@ -10,26 +10,28 @@ fetch("http://localhost:3000/myList")
         data.forEach((listItem) => myBucketList(listItem));
     })
 
-function bucketListInspo(listItem) {
-    const initImages = document.createElement("img")
-    const div = document.querySelector(".leftBlock")
-    initImages.src = listItem.image
-    div.append(initImages)
+function myBucketList(listItem) {
+    const li = document.createElement("li")
+    const list = document.querySelector("#list-items")
 
-    initImages.addEventListener("click", (e) => {
-        console.log("click!")
+    li.textContent = listItem.name
+    list.append(li)
+
+    li.addEventListener("click", (e) => {
+        featuredListIem(listItem)
     })
 }
 
-function myBucketList(listItem) {
-    const initImages = document.createElement("img")
-    const li = document.createElement("li")
-    const list = document.querySelector("#list-items")
-    const div = document.querySelector(".rightBlock")
-    initImages.src = listItem.image
-    div.append(initImages)
-    li.textContent = listItem.name
-    list.append(li)
+
+function featuredListIem(listItem) {
+    const featImage = document.querySelector(".featuredImage")
+    const featActivity = document.querySelector(".activity")
+    const featLocation = document.querySelector(".location")
+    const featDate = document.querySelector(".dateDue")
+    featActivity.textContent = "Activity: " + listItem.name
+    featLocation.textContent = "Location: " + listItem.location
+    featDate.textContent = "Complete By: " + listItem.complete_date
+    featImage.src = listItem.image
 }
 
 function bucketListInspo(listItem) {
@@ -51,7 +53,7 @@ form.addEventListener("submit", (e) => {
         "name": document.getElementById('activity').value,
         "image": document.getElementById('image-url').value,
         "location": document.getElementById('location').value,
-        "date-completion": document.getElementById('completion-date').value,
+        "complete_date": document.getElementById('completion-date').value,
         "complete": []
     }
     fetch("http://localhost:3000/myList", {
