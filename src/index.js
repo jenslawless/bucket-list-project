@@ -81,7 +81,7 @@ function bucketListInspo(listItem) {
 
     const textDiv = document.createElement("div")
     textDiv.className = "middle_text"
-    textDiv.textContent = "hello"
+    textDiv.innerHTML = `${listItem.activity}<br>${listItem.location}`;
     middleDiv.append(textDiv)
 
     imgDiv.append(initImages, middleDiv)
