@@ -35,11 +35,12 @@ function featuredListIem(listItem) {
 }
 
 function bucketListInspo(listItem) {
+    const addDiv = document.createElement("div")
     const initImages = document.createElement("img")
     const div = document.querySelector(".leftBlock")
     initImages.src = listItem.image
     div.append(initImages)
-
+    addDiv.className 
     initImages.addEventListener("click", (e) => {
         console.log("click!")
     })
