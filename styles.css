@@ -18,7 +18,7 @@ body {
 }
 
 .marquee_container {
-    background: #6d9f71;
+    background: #038BA8;
     display: flex;
     overflow: hidden;
     padding: 7px 0;
@@ -73,7 +73,6 @@ body {
 }
 
 #banner {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: #EBEAE4;
     position: flex;
     text-align: center;
@@ -86,8 +85,8 @@ body {
     padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 70px;
-    grid-row-gap: 70px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 }
 
 .leftBlock {
@@ -95,6 +94,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
+    border-radius: 15px;
 }
 
 #div-form {
@@ -103,38 +103,53 @@ body {
     justify-content: center;
     text-align: center;
     background-color: #6d9f71;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.form-input {
+    border-radius: 5px;
+    border: 2px;
 }
 
 .leftBlock img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px;
 }
 
 .rightBlock {
     text-align: center;
     background-color: #6d9f71;
-}
-
-.rightBlock h2 {
-    font-size: 30px;
+    border-radius: 15px;
 }
 
 .rightBlock img {
+    display: flex;
+    justify-content: center;
     width: 600px;
     height: 600px;
+    border-radius: 15px;
 }
 
 .rightBlock p {
     font-size: 24px;
+    margin: 10px;
 }
 
 #actual-list {
-    color: rgba(39, 48, 67);
     font-size: 24px;
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: #038BA8;
+    border-radius: 15px;
+}
+
+.title {
+    font-size: 36px;
+    text-decoration: underline;
 }
 
 .imageContainer {
@@ -185,7 +200,7 @@ input[type="checkbox"]+label::before {
 }
 
 input[type="checkbox"]:checked+label::before {
-    background-color: #2196F3;
+    background-color: #6d9f71;
 }
 
 input[type="checkbox"]+label::after {
@@ -194,7 +209,7 @@ input[type="checkbox"]+label::after {
     top: 4px;
     left: 5px;
     font-size: 14px;
-    color: #fff;
+    color: black;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }

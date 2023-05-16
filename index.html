@@ -23,41 +23,46 @@
     <div class="block_container">
         <div class="leftBlock"></div>
         <div class="rightBlock">
-            <h2>My Bucket List</h2>
+            <h2 class="title">My Bucket List</h2>
             <div class="imageContainer">
                 <img class="featuredImage"
                     src="https://static01.nyt.com/images/2023/02/08/multimedia/08pour-01-fmlw/08pour-01-fmlw-videoSixteenByNine3000.jpg" />
             </div>
-            <p class="activity">Activity: </p>
-            <p class="location">Location: </p>
-            <p class="dateDue">Complete by: </p>
+            <div class="rightblock-information">
+                <p class="activity">Activity: </p>
+                <p class="location">Location: </p>
+                <p class="dateDue">Complete by: </p>
+            </div>
         </div>
 
         <div id="div-form">
             <form id="bucket-list-item">
+                <div class="title"><u>Add a bucket-list item!</u></div>
                 <div>
                     <label for="name">What do you Want to Do?</label>
-                    <input type="text" id="activity" name="name" />
+                    <input class="form-input" type="text" id="activity" name="name" />
                 </div>
                 <div>
                     <label for="image-url">Input Image URL</label>
-                    <input type="text" id="image-url" name="image-url" />
+                    <input class="form-input" type="text" id="image-url" name="image-url" />
                 </div>
                 <div>
                     <label for="location">Location</label>
-                    <input type="text" id="location" name="location" />
+                    <input class="form-input" type="text" id="location" name="location" />
                 </div>
                 <div>
                     <label for="date-completion">When do you want to complete by?</label>
-                    <input type="date" id="completion-date" name="date" />
+                    <input class="form-input" type="date" id="completion-date" name="date" />
                     <div>
-                        <input type="submit" value="Add Bucket-List Item" />
+                        <input class="form-input" type="submit" value="Add Bucket-List Item" />
                     </div>
                 </div>
             </form>
         </div>
         <div id="actual-list">
-            <ul id="list-items"><u>Your Bucket List Items</u></ul>
+            <ul id="list-items">
+                <div class=" title">Y<u>our Bucket List Items</div></u>
+                </ul>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
