@@ -81,14 +81,11 @@ function bucketListInspo(listItem) {
 
     const textDiv = document.createElement("div")
     textDiv.className = "middle_text"
-    textDiv.textContent = "hello"
+    textDiv.innerHTML = `${listItem.activity}<br>${listItem.location}`
     middleDiv.append(textDiv)
 
     imgDiv.append(initImages, middleDiv)
     div.append(imgDiv)
-
-    // initImages.addEventListener("click", (e) => {
-    //     console.log("click!")
 }
 
 
@@ -112,4 +109,3 @@ form.addEventListener("submit", (e) => {
         .then(r => r.json())
         .then(data => myBucketList(data))
 })
-
