@@ -105,6 +105,7 @@ body {
 .rightBlock img {
     display: flex;
     justify-content: center;
+    align-self: center;
     width: 600px;
     height: 600px;
     border-radius: 15px;

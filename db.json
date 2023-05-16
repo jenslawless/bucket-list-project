@@ -18,14 +18,6 @@
     },
     {
       "id": 3,
-      "activity": "Scubadive with whale shakrs",
-      "location": "Baja, California",
-      "image": "https://blog.padi.com/wp-content/uploads/2019/03/whale-shark-belize.jpg",
-      "complete_date": "May 2024",
-      "complete": false
-    },
-    {
-      "id": 4,
       "activity": "Wine tour in Napa",
       "location": "Napa Valley, CA",
       "image": "https://incadventures.com/wp-content/uploads/2013/09/Napa-Wine-Country.jpg",
@@ -33,7 +25,7 @@
       "complete": false
     },
     {
-      "id": 5,
+      "id": 4,
       "activity": "Climb Mount Rainer",
       "location": "Seattle, Washington",
       "image": "https://cdn.outsideonline.com/wp-content/uploads/migrated-images_parent/migrated-images_53/WCMDEV_152187_mt-rainier.jpg",
@@ -41,7 +33,7 @@
       "complete": false
     },
     {
-      "id": 6,
+      "id": 5,
       "activity": "Go to Hawaii",
       "location": "Kauai, Hawaii",
       "image": "https://static.euronews.com/articles/stories/05/98/40/48/1440x810_cmsv2_890e6458-118e-5d59-af39-b30623f8f7d6-5984048.jpg",
@@ -55,7 +47,7 @@
       "image": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/01/31124623/Great-Wall-Of-China.jpg?tr=w-1200,h-900",
       "location": "China",
       "complete_date": "2023-05-27",
-      "complete": true,
+      "complete": false,
       "id": 2
     },
     {
@@ -63,7 +55,7 @@
       "image": "https://i.natgeofe.com/n/819ea774-aa80-435e-af5a-ae56efee7ce3/92491_4x3.jpg",
       "location": "Cuzco, Peru",
       "complete_date": "2023-05-25",
-      "complete": true,
+      "complete": false,
       "id": 3
     },
     {
