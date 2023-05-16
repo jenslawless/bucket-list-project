@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
 * {
     text-transform: lowercase;
     font-family: 'Cormorant Garamond', serif;
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=1753), auto;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -39,6 +41,7 @@ body {
     0% {
         -moz-transform: translateX(100%);
     }
+
     100% {
         -moz-transform: translateX(-100%);
     }
@@ -48,6 +51,7 @@ body {
     0% {
         -webkit-transform: translateX(100%);
     }
+
     100% {
         -webkit-transform: translateX(-100%);
     }
@@ -59,12 +63,14 @@ body {
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
     }
+
     100% {
         -moz-transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
     }
 }
+
 #banner {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color: rgba(202, 204, 144, 1);
@@ -92,6 +98,7 @@ body {
 .rightBlock {
     text-align: center;
     background-color: #AA4465;
+
 }
 
 #div-form {
@@ -127,6 +134,63 @@ h2 {
     text-align: center;
 }
 
-.activity, .location, .dateDue {
+.activity,
+.location,
+.dateDue {
     margin-top: 40px;
+}
+
+.rightBlock p {
+    font-size: 24px;
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked+label::before {
+    background-color: #2196F3;
+}
+
+input[type="checkbox"]+label::after {
+    content: "\2713";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+}
+
+#list-items {
+    list-style-type: none;
 }

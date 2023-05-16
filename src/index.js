@@ -13,15 +13,48 @@ fetch("http://localhost:3000/myList")
 function myBucketList(listItem) {
     const li = document.createElement("li")
     const list = document.querySelector("#list-items")
+    const label = document.createElement("label")
+    const input = document.createElement("input")
 
-    li.textContent = listItem.name
+    input.setAttribute("type", "checkbox")
+    input.setAttribute("id", `check${listItem.id}`)
+    label.setAttribute("for", `check${listItem.id}`)
+    label.textContent = listItem.name
+
+
+    const storedState = localStorage.getItem(`check${listItem.id}`);
+    if (storedState === "true") {
+        input.checked = true;
+    }
+    li.append(input, label)
     list.append(li)
 
     li.addEventListener("click", (e) => {
         featuredListIem(listItem)
     })
-}
 
+    input.addEventListener("change", () => {
+        const complete = input.checked
+
+        localStorage.setItem(`check${listItem.id}`, complete);
+        fetch(`http://localhost:3000/myList/${listItem.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                complete: complete,
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Item marked as complete:", data);
+            })
+            .catch((error) => {
+                console.error("Error updating completion status:", error);
+            });
+    })
+}
 
 function featuredListIem(listItem) {
     const featImage = document.querySelector(".featuredImage")
@@ -35,8 +68,10 @@ function featuredListIem(listItem) {
 }
 
 function bucketListInspo(listItem) {
+
     const initImages = document.createElement("img")
     const div = document.querySelector(".leftBlock")
+
     initImages.src = listItem.image
     div.append(initImages)
 
@@ -66,3 +101,4 @@ form.addEventListener("submit", (e) => {
         .then(r => r.json())
         .then(data => myBucketList(data))
 })
+
