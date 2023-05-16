@@ -18,3 +18,15 @@ Next Week To-Do:
     - Can we get them to autofill up space?
 - Rotation through images if you select 
 - **Stretch Goal** -- have a filter for list -- can filter by date, location, date added?(id number?)
+
+Tuesday: 
+- Fix looping marquis
+- Complete vs. nonComplete buttons 
+- Mouseover the images to get info or button that adds to my list
+- Sort/Filter the Bucket list 
+- integrate some sort of map API 
+
+Monday: 
+- pull
+- change fonts/text styling
+- switch form and list to opposite sides
