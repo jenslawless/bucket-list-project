@@ -81,11 +81,7 @@ function bucketListInspo(listItem) {
 
     const textDiv = document.createElement("div")
     textDiv.className = "middle_text"
-<<<<<<< HEAD
-    textDiv.innerHTML = `${listItem.activity}<br>${listItem.location}`;
-=======
     textDiv.innerHTML = `${listItem.activity}<br>${listItem.location}`
->>>>>>> 944f908cb12f06d0d2aa1935d17f32b924dec082
     middleDiv.append(textDiv)
 
     imgDiv.append(initImages, middleDiv)
@@ -113,3 +109,38 @@ form.addEventListener("submit", (e) => {
         .then(r => r.json())
         .then(data => myBucketList(data))
 })
+
+// Here is me trying to add in the random phto generator that shows nature
+
+var category = 'nature';
+var apiKey = 'cOwtFqUPgDDpOXtIWHvf/Q==v1v8Igiyk9hwLJO2';
+var apiUrl = 'https://api.api-ninjas.com/v1/randomimage?category=' + category;
+
+function getRandomImage() {
+  fetch(apiUrl, {
+    headers: {
+      'X-Api-Key': apiKey,
+      'Accept': 'image/jpg'
+    }
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error: ' + response.status);
+      }
+      return response.blob();
+    })
+    .then(blob => {
+      var imageURL = URL.createObjectURL(blob);
+      var imageElement = document.createElement('img');
+      imageElement.src = imageURL;
+      var imageContainer = document.getElementById('image-container');
+      imageContainer.innerHTML = '';
+      imageContainer.appendChild(imageElement);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+// Call the function to fetch and display the random image
+getRandomImage();
