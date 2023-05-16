@@ -48,7 +48,7 @@ function myBucketList(listItem) {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log("Item marked as complete:", data);
+                (data);
             })
             .catch((error) => {
                 console.error("Error updating completion status:", error);
@@ -68,16 +68,27 @@ function featuredListIem(listItem) {
 }
 
 function bucketListInspo(listItem) {
+    const imgDiv = document.createElement("div")
+    imgDiv.className = "container_divs"
 
     const initImages = document.createElement("img")
-    const div = document.querySelector(".leftBlock")
-
+    initImages.className = "inspo_images"
     initImages.src = listItem.image
-    div.append(initImages)
 
-    initImages.addEventListener("click", (e) => {
-        console.log("click!")
-    })
+    const div = document.querySelector(".leftBlock")
+    const middleDiv = document.createElement("div")
+    middleDiv.className = "middle"
+
+    const textDiv = document.createElement("div")
+    textDiv.className = "middle_text"
+    textDiv.textContent = "hello"
+    middleDiv.append(textDiv)
+
+    imgDiv.append(initImages, middleDiv)
+    div.append(imgDiv)
+
+    // initImages.addEventListener("click", (e) => {
+    //     console.log("click!")
 }
 
 
