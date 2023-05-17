@@ -22,32 +22,34 @@ body {
     background-color: #038BA8;
     overflow: hidden;
     white-space: nowrap;
-  }
-  
-  .marquee_container {
+}
+
+.marquee_container {
     display: inline-block;
     white-space: nowrap;
     animation: marqueeAnimation 60s linear infinite;
     padding: 10px;
     font-size: 24px;
-  }
-  
-  @keyframes marqueeAnimation {
+}
+
+@keyframes marqueeAnimation {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
-  .marquee__item {
+}
+
+.marquee__item {
     display: inline-block;
     margin: 0 10px;
-    color:#383637;;
+    color: #383637;
+    ;
     font-weight: bold;
-  }
-  
+}
+
 
 #banner {
     background-color: #EBEAE4;
@@ -97,19 +99,26 @@ body {
 }
 
 .rightBlock img {
-    display: block; /* Changed from flex to block */
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image doesn't exceed its parent's width */
-    max-height: 100%; /* Ensure the image doesn't exceed its parent's height */
+    display: block;
+    /* Changed from flex to block */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its parent's width */
+    max-height: 100%;
+    /* Ensure the image doesn't exceed its parent's height */
     border-radius: 15px;
 }
 
 .imageContainer {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the image vertically */
-    height: auto; /* Set a fixed height for the container */
-    overflow: hidden; /* Hide any overflow of the image */
+    align-items: center;
+    /* Center the image vertically */
+    height: auto;
+    /* Set a fixed height for the container */
+    overflow: hidden;
+    /* Hide any overflow of the image */
 }
 
 .rightBlock {
@@ -117,13 +126,16 @@ body {
     background-color: #6d9f71;
     border-radius: 15px;
     display: flex;
-    flex-direction: column; /* Align the child elements vertically */
-    align-items: center; /* Center the child elements horizontally */
+    flex-direction: column;
+    /* Align the child elements vertically */
+    align-items: center;
+    /* Center the child elements horizontally */
     padding: 40px;
 }
 
 .rightblock-information {
-    margin-top: 20px; /* Add some spacing between the image and the information */
+    margin-top: 20px;
+    /* Add some spacing between the image and the information */
 }
 
 .rightBlock p {
@@ -132,11 +144,13 @@ body {
 }
 
 .rightBlock .title {
-    margin-top: 0; /* Remove the top margin of the title */
+    margin-top: 0;
+    /* Remove the top margin of the title */
 }
 
 .rightBlock .featuredImage {
-    object-fit: contain; /* Fit the image within its parent container */
+    object-fit: contain;
+    /* Fit the image within its parent container */
     width: 100%;
     height: auto;
 }

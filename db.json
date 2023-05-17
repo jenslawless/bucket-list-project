@@ -39,6 +39,14 @@
       "image": "https://static.euronews.com/articles/stories/05/98/40/48/1440x810_cmsv2_890e6458-118e-5d59-af39-b30623f8f7d6-5984048.jpg",
       "complete_date": "August 2024",
       "complete": false
+    },
+    {
+      "id": 6,
+      "activity": "Go to Hawaii",
+      "location": "Kauai, Hawaii",
+      "image": "https://static.euronews.com/articles/stories/05/98/40/48/1440x810_cmsv2_890e6458-118e-5d59-af39-b30623f8f7d6-5984048.jpg",
+      "complete_date": "August 2024",
+      "complete": false
     }
   ],
   "myList": [
@@ -47,7 +55,7 @@
       "image": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/01/31124623/Great-Wall-Of-China.jpg?tr=w-1200,h-900",
       "location": "China",
       "complete_date": "2023-05-27",
-      "complete": false,
+      "complete": true,
       "id": 2
     },
     {
