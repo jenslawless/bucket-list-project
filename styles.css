@@ -22,6 +22,7 @@ body {
     background-color: #038BA8;
     overflow: hidden;
     white-space: nowrap;
+    border: 2px solid black;
 }
 
 .marquee_container {
@@ -80,15 +81,19 @@ body {
     font-size: 24px;
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     background-color: #6d9f71;
+    padding: 6px;
     border-radius: 15px;
+    border: 2px solid black;
     align-items: center;
 }
 
 .form-input {
     border-radius: 5px;
     border: 2px;
+    font-size: 20px;
+    background-color: #EBEAE4;
 }
 
 .leftBlock img {
@@ -99,7 +104,6 @@ body {
 }
 
 .inspo_images {
-    border: 1px solid #038BA8;
     /* Example border style */
 }
 
@@ -136,6 +140,7 @@ body {
     align-items: center;
     /* Center the child elements horizontally */
     padding: 40px;
+    border: 2px solid black;
 }
 
 .rightblock-information {
@@ -165,9 +170,10 @@ body {
     font-size: 24px;
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     background-color: #038BA8;
     border-radius: 15px;
+    border: 2px solid black;
 }
 
 .title {
@@ -228,7 +234,7 @@ input[type="checkbox"]+label::before {
     left: 0;
     width: 20px;
     height: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid black;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -284,9 +290,12 @@ input[type="checkbox"]:checked+label::after {
 }
 
 .middle_text {
+    display: flex;
+    justify-content: center;
     background-color: #038BA8;
     color: white;
     font-size: 16px;
-    padding: 16px 32px;
-    border-radius: 50px;
+    padding: 16px 30px;
+    border: 2px solid black;
+    border-radius: 30px;
 }
