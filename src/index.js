@@ -88,10 +88,23 @@ function bucketListInspo(listItem) {
     const middleDiv = document.createElement("div")
     middleDiv.className = "middle"
 
+    const refreshButton = document.createElement("button")
+    refreshButton.className = "btn"
+    refreshButton.innerHTML = "Add me to your bucket list!"
+
+    refreshButton.addEventListener("click", (e) => {
+        const activityField = document.getElementById("activity")
+        activityField.value = listItem.activity
+        const locationField = document.getElementById("location")
+        locationField.value = listItem.location
+        const imageField = document.getElementById("image-url")
+        imageField.value = listItem.image
+    })
+
     const textDiv = document.createElement("div")
     textDiv.className = "middle_text"
     textDiv.innerHTML = `${listItem.activity}<br>${listItem.location}`
-    middleDiv.append(textDiv)
+    middleDiv.append(textDiv, refreshButton)
 
     imgDiv.append(initImages, middleDiv)
     div.append(imgDiv)
@@ -142,17 +155,25 @@ function randomIdeaGen(listItem) {
             const middleDiv = document.createElement("div");
             middleDiv.className = "middle";
 
+            const refreshButton = document.createElement("button")
+            refreshButton.className = "btn"
+            refreshButton.innerHTML = "Add me to your bucket list!"
+
+            refreshButton.addEventListener("click", (e) => {
+                const activityField = document.getElementById("activity")
+                activityField.value = data.item
+            })
+
             const textDiv = document.createElement("div");
             textDiv.className = "middle_text";
             textDiv.innerHTML = data.item
-            middleDiv.append(textDiv);
+            middleDiv.append(textDiv, refreshButton);
 
-            imgDiv.append(initImages, middleDiv);
+            imgDiv.append(middleDiv, initImages);
             div.append(imgDiv);
         })
         .catch((error) => {
             console.error("Error retrieving random idea:", error)
         })
 }
-
 
