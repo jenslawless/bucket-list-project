@@ -98,6 +98,10 @@ body {
     border-radius: 15px;
 }
 
+.inspo_images {
+    border: 1px solid #038BA8; /* Example border style */
+  }
+
 .rightBlock img {
     display: block;
     /* Changed from flex to block */
