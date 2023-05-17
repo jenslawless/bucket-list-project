@@ -79,10 +79,23 @@ function bucketListInspo(listItem) {
     const middleDiv = document.createElement("div")
     middleDiv.className = "middle"
 
+    const refreshButton = document.createElement("button")
+    refreshButton.className = "btn"
+    refreshButton.innerHTML = "Add me to your bucket list!"
+
+    refreshButton.addEventListener("click", (e) => {
+        const activityField = document.getElementById("activity")
+        activityField.value = listItem.activity
+        const locationField = document.getElementById("location")
+        locationField.value = listItem.location
+        const imageField = document.getElementById("image-url")
+        imageField.value = listItem.image
+    })
+
     const textDiv = document.createElement("div")
     textDiv.className = "middle_text"
     textDiv.innerHTML = `${listItem.activity}<br>${listItem.location}`
-    middleDiv.append(textDiv)
+    middleDiv.append(textDiv, refreshButton)
 
     imgDiv.append(initImages, middleDiv)
     div.append(imgDiv)
@@ -120,13 +133,26 @@ function randomIdeaGen(listItem) {
             'X-API-Key': keyAPI
         },
     })
-        .then(blob => {
-            var imageURL = URL.createObjectURL(blob);
-            var imageElement = document.createElement('img');
-            imageElement.src = imageURL;
-            var imageContainer = document.getElementById('image-container');
-            imageContainer.innerHTML = '';
-            imageContainer.appendChild(imageElement);
+        .then((r) => r.json())
+        .then((data) => {
+            const imgDiv = document.createElement("div");
+            imgDiv.className = "container_divs";
+
+            const initImages = document.createElement("img");
+            initImages.className = "inspo_images";
+            initImages.src = "https://png.pngtree.com/png-vector/20220609/ourmid/pngtree-airplane-and-globe-background-png-image_4833728.png";
+
+            const div = document.querySelector(".leftBlock");
+            const middleDiv = document.createElement("div");
+            middleDiv.className = "middle";
+
+            const textDiv = document.createElement("div");
+            textDiv.className = "middle_text";
+            textDiv.innerHTML = data.item
+            middleDiv.append(textDiv);
+
+            imgDiv.append(initImages, middleDiv);
+            div.append(imgDiv);
         })
         .catch(error => {
             console.error('Error:', error);

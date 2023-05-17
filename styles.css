@@ -249,7 +249,6 @@ input[type="checkbox"]:checked+label::after {
     text-align: center;
     width: 100%;
     z-index: 1;
-    pointer-events: none;
 }
 
 .container_divs:hover .inspo_images {
@@ -266,4 +265,12 @@ input[type="checkbox"]:checked+label::after {
     font-size: 16px;
     padding: 16px 32px;
     border-radius: 50px;
+}
+
+.btn {
+    font-size: 18px;
+    color: white;
+    background-color: #038BA8;
+    border: 5px solid #038BA8;
+    border-radius: 15px;
 }
