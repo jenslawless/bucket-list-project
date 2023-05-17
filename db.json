@@ -55,7 +55,7 @@
       "image": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/01/31124623/Great-Wall-Of-China.jpg?tr=w-1200,h-900",
       "location": "China",
       "complete_date": "2023-05-27",
-      "complete": false,
+      "complete": true,
       "id": 2
     },
     {
@@ -63,7 +63,7 @@
       "image": "https://i.natgeofe.com/n/819ea774-aa80-435e-af5a-ae56efee7ce3/92491_4x3.jpg",
       "location": "Cuzco, Peru",
       "complete_date": "2023-05-25",
-      "complete": false,
+      "complete": true,
       "id": 3
     },
     {

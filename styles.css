@@ -99,8 +99,9 @@ body {
 }
 
 .inspo_images {
-    border: 1px solid #038BA8; /* Example border style */
-  }
+    border: 1px solid #038BA8;
+    /* Example border style */
+}
 
 .rightBlock img {
     display: block;
