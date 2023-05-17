@@ -10,6 +10,7 @@ fetch("http://localhost:3000/myList")
         data.forEach((listItem) => myBucketList(listItem));
     })
 
+
 function myBucketList(listItem) {
     const li = document.createElement("li")
     const list = document.querySelector("#list-items")
@@ -30,12 +31,13 @@ function myBucketList(listItem) {
     list.append(li)
 
     li.addEventListener("click", (e) => {
-        featuredListIem(listItem)
-    })
+        featuredListIem(listItem);
+    });
 
-    input.addEventListener("change", () => {
+
+    input.addEventListener("change", (e) => {
         const complete = input.checked
-
+        e.stopPropagation();
         localStorage.setItem(`check${listItem.id}`, complete);
         fetch(`http://localhost:3000/myList/${listItem.id}`, {
             method: "PATCH",
@@ -55,7 +57,7 @@ function myBucketList(listItem) {
             });
     })
 }
-
+// function to populate the featured list item after you click your list item down below
 function featuredListIem(listItem) {
     const featImage = document.querySelector(".featuredImage")
     const featActivity = document.querySelector(".activity")
@@ -66,7 +68,7 @@ function featuredListIem(listItem) {
     featDate.textContent = "Complete By: " + listItem.complete_date
     featImage.src = listItem.image
 }
-
+// these are the pre-populated "inspo" pics that you can add to your list if you like them!
 function bucketListInspo(listItem) {
     const imgDiv = document.createElement("div")
     imgDiv.className = "container_divs"
@@ -101,7 +103,7 @@ function bucketListInspo(listItem) {
     div.append(imgDiv)
 }
 
-
+// this is the form to add your own bucket list item
 const form = document.querySelector('#bucket-list-item')
 form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -123,8 +125,8 @@ form.addEventListener("submit", (e) => {
         .then(data => myBucketList(data))
 })
 
-// Here is me trying to add in the random phto generator that shows nature
 
+// this is pulling from a bucket list generator API to help users think of new ideas! There is a button in it to refresh the data without refreshing the page.
 function randomIdeaGen(listItem) {
     fetch("https://api.api-ninjas.com/v1/bucketlist", {
         method: 'GET',
@@ -146,10 +148,19 @@ function randomIdeaGen(listItem) {
             const middleDiv = document.createElement("div");
             middleDiv.className = "middle";
 
+            const refreshButton = document.createElement("button")
+            refreshButton.className = "btn"
+            refreshButton.innerHTML = "Add me to your bucket list!"
+
+            refreshButton.addEventListener("click", (e) => {
+                const activityField = document.getElementById("activity")
+                activityField.value = data.item
+            })
+
             const textDiv = document.createElement("div");
             textDiv.className = "middle_text";
             textDiv.innerHTML = data.item
-            middleDiv.append(textDiv);
+            middleDiv.append(textDiv, refreshButton);
 
             imgDiv.append(initImages, middleDiv);
             div.append(imgDiv);
@@ -158,4 +169,3 @@ function randomIdeaGen(listItem) {
             console.error('Error:', error);
         });
 }
-

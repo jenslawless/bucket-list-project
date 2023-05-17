@@ -89,6 +89,7 @@ body {
 .form-input {
     border-radius: 5px;
     border: 2px;
+    font-size: 20px;
 }
 
 .leftBlock img {
@@ -150,7 +151,7 @@ body {
     font-size: 24px;
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     background-color: #038BA8;
     border-radius: 15px;
 }
@@ -262,7 +263,7 @@ input[type="checkbox"]:checked+label::after {
 .middle_text {
     background-color: #038BA8;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 16px 32px;
     border-radius: 50px;
 }
