@@ -105,18 +105,13 @@ body {
 
 .inspo_images {
     border: 2px solid black;
-    /* Example border style */
 }
 
 .rightBlock img {
     display: block;
-    /* Changed from flex to block */
     margin: 0 auto;
-    /* Center the image horizontally */
     max-width: 100%;
-    /* Ensure the image doesn't exceed its parent's width */
     max-height: 100%;
-    /* Ensure the image doesn't exceed its parent's height */
     border-radius: 15px;
 }
 
@@ -124,11 +119,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center the image vertically */
     height: auto;
-    /* Set a fixed height for the container */
     overflow: hidden;
-    /* Hide any overflow of the image */
 }
 
 .rightBlock {
@@ -137,31 +129,27 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    /* Align the child elements vertically */
     align-items: center;
-    /* Center the child elements horizontally */
     padding: 40px;
     border: 2px solid black;
 }
 
 .rightblock-information {
     margin-top: 20px;
-    /* Add some spacing between the image and the information */
 }
 
 .rightBlock p {
-    font-size: 24px;
+    font-size: 35px;
     margin: 10px;
+    font-weight: bold;
 }
 
 .rightBlock .title {
     margin-top: 0;
-    /* Remove the top margin of the title */
 }
 
 .rightBlock .featuredImage {
     object-fit: contain;
-    /* Fit the image within its parent container */
     width: 100%;
     height: auto;
 }

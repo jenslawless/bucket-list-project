@@ -136,7 +136,9 @@ form.addEventListener("submit", (e) => {
 
 
 // this is pulling from a bucket list generator API to help users think of new ideas! There is a button in it to refresh the data without refreshing the page.
+
 function randomIdeaGen(listItem) {
+
     fetch("https://api.api-ninjas.com/v1/bucketlist", {
         method: 'GET',
         headers: {
@@ -146,6 +148,8 @@ function randomIdeaGen(listItem) {
     })
         .then((r) => r.json())
         .then((data) => {
+            let newBucket = data.item
+
             const imgDiv = document.createElement("div");
             imgDiv.className = "container_divs";
 
@@ -162,10 +166,13 @@ function randomIdeaGen(listItem) {
             refreshButton.innerHTML = "Add me to your bucket list!"
 
             refreshButton.addEventListener("click", (e) => {
+
                 const activityField = document.getElementById("activity")
-                activityField.value = data.item
+                activityField.value = newBucket
+
                 const locationField = document.getElementById("location")
                 locationField.value = ""
+
                 const imageField = document.getElementById("image-url")
                 imageField.value = ""
             })
@@ -185,9 +192,10 @@ function randomIdeaGen(listItem) {
                     .then((r) => r.json())
                     .then((data) => {
                         textDiv.innerHTML = data.item
+                        newBucket = data.item
                     })
-            })
 
+            })
 
             const textDiv = document.createElement("div");
             textDiv.className = "middle_text";
