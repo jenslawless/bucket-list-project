@@ -42,9 +42,11 @@
     },
     {
       "id": 6,
-      "image": "https://png.pngtree.com/png-vector/20220609/ourmid/pngtree-airplane-and-globe-background-png-image_4833728.png",
-      "activity": "test test",
-      "location": "test test"
+      "activity": "Go to Hawaii",
+      "location": "Kauai, Hawaii",
+      "image": "https://static.euronews.com/articles/stories/05/98/40/48/1440x810_cmsv2_890e6458-118e-5d59-af39-b30623f8f7d6-5984048.jpg",
+      "complete_date": "August 2024",
+      "complete": false
     }
   ],
   "myList": [

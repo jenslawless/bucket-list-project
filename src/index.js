@@ -1,14 +1,23 @@
 fetch("http://localhost:3000/items")
     .then((r) => r.json())
     .then((data) => {
-        data.forEach((listItem) => bucketListInspo(listItem));
+        data.forEach((listItem) => {
+            let id = listItem.id
+            if (id <= 5) {
+                bucketListInspo(listItem)
+            }
+            else {
+                randomIdeaGen(listItem)
+            }
+        })
     })
 
 fetch("http://localhost:3000/myList")
     .then((r) => r.json())
     .then((data) => {
-        data.forEach((listItem) => myBucketList(listItem));
+        data.forEach((listItem) => myBucketList(listItem))
     })
+
 
 function myBucketList(listItem) {
     const li = document.createElement("li")
@@ -112,35 +121,38 @@ form.addEventListener("submit", (e) => {
 
 // Here is me trying to add in the random phto generator that shows nature
 
-var category = 'nature';
-var apiKey = 'cOwtFqUPgDDpOXtIWHvf/Q==v1v8Igiyk9hwLJO2';
-var apiUrl = 'https://api.api-ninjas.com/v1/randomimage?category=' + category;
+function randomIdeaGen(listItem) {
+    fetch("https://api.api-ninjas.com/v1/bucketlist", {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-API-Key': keyAPI
+        },
+    })
+        .then((r) => r.json())
+        .then((data) => {
+            const imgDiv = document.createElement("div");
+            imgDiv.className = "container_divs";
 
-function getRandomImage() {
-  fetch(apiUrl, {
-    headers: {
-      'X-Api-Key': apiKey,
-      'Accept': 'image/jpg'
-    }
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Error: ' + response.status);
-      }
-      return response.blob();
-    })
-    .then(blob => {
-      var imageURL = URL.createObjectURL(blob);
-      var imageElement = document.createElement('img');
-      imageElement.src = imageURL;
-      var imageContainer = document.getElementById('image-container');
-      imageContainer.innerHTML = '';
-      imageContainer.appendChild(imageElement);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+            const initImages = document.createElement("img");
+            initImages.className = "inspo_images";
+            initImages.src = "https://png.pngtree.com/png-vector/20220609/ourmid/pngtree-airplane-and-globe-background-png-image_4833728.png";
+
+            const div = document.querySelector(".leftBlock");
+            const middleDiv = document.createElement("div");
+            middleDiv.className = "middle";
+
+            const textDiv = document.createElement("div");
+            textDiv.className = "middle_text";
+            textDiv.innerHTML = data.item
+            middleDiv.append(textDiv);
+
+            imgDiv.append(initImages, middleDiv);
+            div.append(imgDiv);
+        })
+        .catch((error) => {
+            console.error("Error retrieving random idea:", error)
+        })
 }
 
-// Call the function to fetch and display the random image
-getRandomImage();
+

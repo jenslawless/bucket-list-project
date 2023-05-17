@@ -30,3 +30,9 @@ Monday:
 - pull
 - change fonts/text styling
 - switch form and list to opposite sides
+
+Wednesday:
+- try to do random image API // random bucket list API
+- Add buttons to inspo pics to "add to your list"
+- Add a Status for "complete OR not complete"
+- change functunality of checkmarks so not all things are checked. 
