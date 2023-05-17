@@ -172,6 +172,14 @@ h2 {
     margin-top: 40px;
 }
 
+.rightBlock img {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    border-radius: 15px;
+}
+
 .rightBlock p {
     font-size: 24px;
 }
