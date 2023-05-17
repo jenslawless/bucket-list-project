@@ -105,18 +105,13 @@ body {
 
 .inspo_images {
     border: 2px solid black;
-    /* Example border style */
 }
 
 .rightBlock img {
     display: block;
-    /* Changed from flex to block */
     margin: 0 auto;
-    /* Center the image horizontally */
     max-width: 100%;
-    /* Ensure the image doesn't exceed its parent's width */
     max-height: 100%;
-    /* Ensure the image doesn't exceed its parent's height */
     border-radius: 15px;
 }
 
@@ -124,11 +119,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center the image vertically */
     height: auto;
-    /* Set a fixed height for the container */
     overflow: hidden;
-    /* Hide any overflow of the image */
 }
 
 .rightBlock {
@@ -139,16 +131,20 @@ body {
 
 .rightBlock img {
     display: flex;
-    justify-content: center;
-    align-self: center;
-    width: 600px;
-    height: 600px;
-    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 2px solid black;
+}
+
+.rightblock-information {
+    margin-top: 20px;
 }
 
 .rightBlock p {
-    font-size: 24px;
+    font-size: 35px;
     margin: 10px;
+    font-weight: bold;
 }
 
 #actual-list {

@@ -39,6 +39,14 @@
       "image": "https://static.euronews.com/articles/stories/05/98/40/48/1440x810_cmsv2_890e6458-118e-5d59-af39-b30623f8f7d6-5984048.jpg",
       "complete_date": "August 2024",
       "complete": false
+    },
+    {
+      "id": 6,
+      "activity": "",
+      "location": "",
+      "image": "",
+      "complete_date": "",
+      "complete": false
     }
   ],
   "myList": [
@@ -55,7 +63,7 @@
       "image": "https://i.natgeofe.com/n/819ea774-aa80-435e-af5a-ae56efee7ce3/92491_4x3.jpg",
       "location": "Cuzco, Peru",
       "complete_date": "2023-05-25",
-      "complete": false,
+      "complete": true,
       "id": 3
     },
     {
