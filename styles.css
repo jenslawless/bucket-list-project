@@ -96,25 +96,51 @@ body {
     border-radius: 15px;
 }
 
+.rightBlock img {
+    display: block; /* Changed from flex to block */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image doesn't exceed its parent's width */
+    max-height: 100%; /* Ensure the image doesn't exceed its parent's height */
+    border-radius: 15px;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image vertically */
+    height: auto; /* Set a fixed height for the container */
+    overflow: hidden; /* Hide any overflow of the image */
+}
+
 .rightBlock {
     text-align: center;
     background-color: #6d9f71;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Align the child elements vertically */
+    align-items: center; /* Center the child elements horizontally */
+    padding: 40px;
 }
 
-.rightBlock img {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    width: 600px;
-    height: 600px;
-    border-radius: 15px;
+.rightblock-information {
+    margin-top: 20px; /* Add some spacing between the image and the information */
 }
 
 .rightBlock p {
     font-size: 24px;
     margin: 10px;
 }
+
+.rightBlock .title {
+    margin-top: 0; /* Remove the top margin of the title */
+}
+
+.rightBlock .featuredImage {
+    object-fit: contain; /* Fit the image within its parent container */
+    width: 100%;
+    height: auto;
+}
+
 
 #actual-list {
     font-size: 24px;
