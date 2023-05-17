@@ -126,7 +126,7 @@ function randomIdeaGen(listItem) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-API-Key': "ggLWrX5vEheJ0pgZl1pZew==wsWy3k66tmmYLyCR"
+            'X-API-Key': keyAPI
         },
     })
         .then((r) => r.json())
@@ -154,3 +154,5 @@ function randomIdeaGen(listItem) {
             console.error("Error retrieving random idea:", error)
         })
 }
+
+
