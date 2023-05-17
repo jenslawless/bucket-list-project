@@ -22,32 +22,34 @@ body {
     background-color: #038BA8;
     overflow: hidden;
     white-space: nowrap;
-  }
-  
-  .marquee_container {
+}
+
+.marquee_container {
     display: inline-block;
     white-space: nowrap;
     animation: marqueeAnimation 60s linear infinite;
     padding: 10px;
     font-size: 24px;
-  }
-  
-  @keyframes marqueeAnimation {
+}
+
+@keyframes marqueeAnimation {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
-  .marquee__item {
+}
+
+.marquee__item {
     display: inline-block;
     margin: 0 10px;
-    color:#383637;;
+    color: #383637;
+    ;
     font-weight: bold;
-  }
-  
+}
+
 
 #banner {
     background-color: #EBEAE4;
@@ -94,6 +96,34 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+}
+
+.inspo_images {
+    border: 1px solid #038BA8;
+    /* Example border style */
+}
+
+.rightBlock img {
+    display: block;
+    /* Changed from flex to block */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its parent's width */
+    max-height: 100%;
+    /* Ensure the image doesn't exceed its parent's height */
+    border-radius: 15px;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center the image vertically */
+    height: auto;
+    /* Set a fixed height for the container */
+    overflow: hidden;
+    /* Hide any overflow of the image */
 }
 
 .rightBlock {
