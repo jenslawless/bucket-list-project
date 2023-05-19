@@ -17,6 +17,7 @@ body {
     background-color: #EBEAE4;
 }
 
+/* we learned about using keyframes helping with animations in CSS. This dictates the specific styles that should be applied at each part of the animation */
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -29,6 +30,7 @@ body {
     }
 }
 
+/* this one is for browsers that use Webkit -- mostly Safari! So we could open on our phones */
 @-webkit-keyframes marquee {
     0% {
         transform: translateX(0);
@@ -209,8 +211,7 @@ h2 {
     font-size: 24px;
 }
 
-
-input[type="checkbox"] {
+.checkbox-class {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -221,13 +222,13 @@ input[type="checkbox"] {
     border-radius: 50px;
 }
 
-input[type="checkbox"]+label {
+.label-class {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
 }
 
-input[type="checkbox"]+label::before {
+.label-class::before {
     content: "";
     position: absolute;
     top: 0;
@@ -239,11 +240,11 @@ input[type="checkbox"]+label::before {
     border-radius: 10px;
 }
 
-input[type="checkbox"]:checked+label::before {
+.checkbox-class:checked+.label-class::before {
     background-color: #6d9f71;
 }
 
-input[type="checkbox"]+label::after {
+.label-class::after {
     content: "\2713";
     position: absolute;
     top: 4px;
@@ -254,7 +255,7 @@ input[type="checkbox"]+label::after {
     transition: opacity 0.2s ease-in-out;
 }
 
-input[type="checkbox"]:checked+label::after {
+.checkbox-class:checked+.label-class::after {
     opacity: 1;
 }
 

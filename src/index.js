@@ -1,3 +1,4 @@
+// setting up the left inspo pics from our db json
 fetch("http://localhost:3000/items")
     .then((r) => r.json())
     .then((data) => {
@@ -11,6 +12,7 @@ fetch("http://localhost:3000/items")
         });
     });
 
+// fetching the DB json for the user specific list from entering list items into the form.
 fetch("http://localhost:3000/myList")
     .then((r) => r.json())
     .then((data) => {
@@ -26,7 +28,9 @@ function myBucketList(listItem) {
 
     input.setAttribute("type", "checkbox");
     input.setAttribute("id", `check${listItem.id}`);
+    input.className = "checkbox-class"
     label.setAttribute("for", `check${listItem.id}`);
+    label.className = "label-class"
     label.textContent = listItem.name;
 
     const storedState = localStorage.getItem(`check${listItem.id}`);
@@ -36,7 +40,7 @@ function myBucketList(listItem) {
     li.append(input, label);
     list.append(li);
 
-    li.addEventListener("click", (e) => {
+    label.addEventListener("click", (e) => {
         featuredListIem(listItem);
     });
 
@@ -73,7 +77,7 @@ function featuredListIem(listItem) {
     featDate.textContent = "Complete By: " + listItem.complete_date;
     featImage.src = listItem.image;
 }
-// these are the pre-populated "inspo" pics that you can add to your list if you like them!
+// these are the pre-populated "inspo" pics that you can add to your list if you like them
 function bucketListInspo(listItem) {
     const imgDiv = document.createElement("div");
     imgDiv.className = "container_divs";
@@ -128,9 +132,11 @@ form.addEventListener("submit", (e) => {
     })
         .then((r) => r.json())
         .then((data) => myBucketList(data));
+
+    e.target.reset();
 });
 
-// this is pulling from a bucket list generator API to help users think of new ideas! There is a button in it to refresh the data without refreshing the page.
+// this is pulling from a bucket list generator API to help users think of new ideas. There is a button in it to refresh the data without refreshing the page.
 function randomIdeaGen(listItem) {
 
     fetch("https://api.api-ninjas.com/v1/bucketlist", {

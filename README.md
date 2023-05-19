@@ -1,38 +1,13 @@
 # bucket-list-project
+-	Bucket List creator to help users create an aesthetically pleasing and easy to use bucket list to keep track of what they want to accomplish in life. 
+
 As a user I can…
-1.	Create my own bucket list item by inserting activity, image, complete by date, and location (TBD).
+
+1.	Create my own bucket list item by inserting activity, image, complete by date, and location.
 2.	I can see the total list of my bucket list items and by clicking on them, have them appear in the main area. There is a button that shows whether I have checked off my bucket list or not. 
+3. There are inspiration pictures on the left curated by the websites database. 
+
+## Installation 
+``` npm install json-server
 
 
-Stretch goals --
-- Random bucket list generator
-- Search near me for for different activities 
-
-
-Next Week To-Do:
-- Form to post on rightBlock
-- Add buttons to add stock ideas to your List
-- Create List in bottom right with all your Bucket List ideas
-    - **Stretch Goal** Add checkboxes to "check" item off list
-- General formatting of images within the divs
-    - Can we get them to autofill up space?
-- Rotation through images if you select 
-- **Stretch Goal** -- have a filter for list -- can filter by date, location, date added?(id number?)
-
-Tuesday: 
-- Fix looping marquis
-- Complete vs. nonComplete buttons 
-- Mouseover the images to get info or button that adds to my list
-- Sort/Filter the Bucket list 
-- integrate some sort of map API 
-
-Monday: 
-- pull
-- change fonts/text styling
-- switch form and list to opposite sides
-
-Wednesday:
-- try to do random image API // random bucket list API
-- Add buttons to inspo pics to "add to your list"
-- Add a Status for "complete OR not complete"
-- change functunality of checkmarks so not all things are checked. 
